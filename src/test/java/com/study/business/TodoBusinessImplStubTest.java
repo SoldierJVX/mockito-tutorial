@@ -19,15 +19,4 @@ public class TodoBusinessImplStubTest {
 
         assertEquals(2, filteredTodos.size());
     }
-
-    @Test
-    public void testRetrieveTodosRelatedToSpring_usingAStub2(){
-        TodoService todoServiceStub = new TodoServiceStub();
-        TodoBusinessImpl todoBusinessImpl = new TodoBusinessImpl(todoServiceStub);
-
-        List<String> filteredTodos = todoBusinessImpl
-                .retrieveTodosRelatedToSpring("Dummy1");
-
-        assertEquals(0, filteredTodos.size());
-    }
 }
